@@ -3,7 +3,7 @@ let inputs = document.querySelectorAll("input")
 let submit = document.querySelector("#submit")
 
 submit.addEventListener("click",()=>{
-    let body = document.querySelector("book-list")
+    let body = document.querySelector("#book-list")
     let row = body.insertRow()
     for(let i=0;i<4;i++){
         let cell = row.insertCell(i)
@@ -14,4 +14,5 @@ submit.addEventListener("click",()=>{
             cell.textContent = `${inputs[i].value}`
         }
     }
+	body.append(row)
 })
