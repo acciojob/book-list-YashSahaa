@@ -8,7 +8,10 @@ submit.addEventListener("click",()=>{
     for(let i=0;i<4;i++){
         let cell = row.insertCell(i)
         if(i==3){
-            cell.textContent = "cross"
+			let newBtn = document.createElement('button');
+			newBtn.className="delete";
+		    newBtn.innerText = 'X';
+            cell.append(newBtn)
         }
         else{
             cell.textContent = `${inputs[i].value}`
@@ -16,3 +19,10 @@ submit.addEventListener("click",()=>{
     }
 	body.append(row)
 })
+let delBtn = document.querySelectorAll(".delete")
+for(let i=0;i<delBtn.length;i++){
+	delBtn[i].addEventListener("click",(event_details)=>{
+		console.log(event_details)
+		event_details.target.parentNode.parentNode.remove()
+	})
+}
