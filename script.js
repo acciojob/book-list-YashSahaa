@@ -18,11 +18,11 @@ submit.addEventListener("click",()=>{
         }
     }
 	body.append(row)
+	let delBtn = document.querySelectorAll(".delete")
+	for(let i=0;i<delBtn.length;i++){
+		delBtn[i].addEventListener("click",(event_details)=>{
+			console.log(event_details)
+			event_details.target.parentNode.parentNode.remove()
+		})
+	}
 })
-let delBtn = document.querySelectorAll(".delete")
-for(let i=0;i<delBtn.length;i++){
-	delBtn[i].addEventListener("click",(event_details)=>{
-		console.log(event_details)
-		event_details.target.parentNode.parentNode.remove()
-	})
-}

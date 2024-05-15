@@ -1,1 +1,22 @@
 /*  your css code here. If applicable */
+body{
+	text-align:center;
+}
+#submit{
+	background-color:blue;
+	color : white;
+	border-radius:5px;
+	margin:10px;
+}
+input{
+	width:100%;
+}
+.delete{
+	background-color:red;
+	color:white;
+	border-radius:5px;
+	border:none;
+}
+div,table{
+	text-align:left;
+}
